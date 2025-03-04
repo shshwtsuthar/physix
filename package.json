@@ -1,0 +1,20 @@
+{
+  "name": "physix",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/shshwtsuthar/physix#readme",
+  "bugs": {
+    "url": "https://github.com/shshwtsuthar/physix/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shshwtsuthar/physix.git"
+  },
+  "license": "ISC",
+  "author": "Shashwat Suthar",
+  "type": "commonjs",
+  "main": "core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
