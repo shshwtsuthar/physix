@@ -33,7 +33,7 @@ class Circle{
 
     Render(){
         for (let radius = 0; radius <= this.radius; radius++){
-            for (let theta = 0; theta <= 360; theta=theta+0.1){
+            for (let theta = 0; theta <= 360; theta=theta+(1/(radius/2))){
                 var x = radius * Math.sin(theta * (Math.PI/180))
                 var y = radius * Math.cos(theta * (Math.PI/180))
 
@@ -44,6 +44,6 @@ class Circle{
     }
 }
 
-var Circles = new Circle(x=700, y=700, radius=500, color="red");
+var Circles = new Circle(x=700, y=700, radius=300, color="red");
 
 Circles.Render();
