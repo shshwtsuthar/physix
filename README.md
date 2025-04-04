@@ -41,6 +41,6 @@ Imagine trying to predict where a ball will be next. Instead of constantly track
 
 The VerletObject class utilizes Position Verlet integration, a numerical method often favored in physics simulations for its excellent stability (especially with constraints) and good energy conservation compared to simpler Euler methods. Instead of explicitly storing and integrating velocity, it calculates an object's next position, $ \bm{p}_{n+1} $, based on its current position, $ \bm{p}n $, its previous position, $ \bm{p}{n-1} $, and the current acceleration $ \bm{a}_n $ over a time step $ \Delta t $. The core formula is:
 
-$ \bm{p}_{n+1} = \bm{p}_n + (\bm{p}n - \bm{p}{n-1}) + \bm{a}_n (\Delta t)^2 $
+$\bm{p}_{n+1} = \bm{p}_n + (\bm{p}n - \bm{p}{n-1}) + \bm{a}_n (\Delta t)^2$
 
 Here, the term $ (\bm{p}n - \bm{p}{n-1}) $ implicitly represents the object's current velocity scaled by $ \Delta t $. In the code's updatePosition method, this.position corresponds to $ \bm{p}n $, this.oldPosition corresponds to $ \bm{p}{n-1} $, and this.verletAcceleration provides $ \bm{a}_n $. Friction or damping is typically applied by scaling the implicit velocity term $ (\bm{p}n - \bm{p}{n-1}) $ before adding it. This reliance on positions makes it particularly well-suited for enforcing distance constraints, as seen in the cloth simulation example, because constraint corrections directly adjust positions, which neatly fits into the Verlet update cycle.
