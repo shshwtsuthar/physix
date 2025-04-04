@@ -18,7 +18,7 @@ function getRandomColor() {
 function setupBasicDemo(physix) {
     console.log("Setting up Basic Demo");
     physix.setGravity(0, 9.81 * 50); // Reset gravity if changed by other demos
-    physix.debug = true; // Show debug grid
+    physix.debug = false; // Show debug grid
 
     // Add some circles
     for (let i = 0; i < 10; i++) {
@@ -47,9 +47,9 @@ function setupBasicDemo(physix) {
             getRandomColor()
         );
         rect.mass = (width * height) * 0.05;
-        rect.restitution = 0.4 + Math.random() * 0.3; // Less bouncy
-        rect.velocity.x = (Math.random() - 0.5) * 100;
-         // rect.boundaryBehavior = 'wrap'; // Example: make rectangles wrap
+        rect.restitution = 1; // Boink boink
+        rect.velocity.x = 3000;
+         // rect.boundaryBehavsior = 'wrap'; // Example: make rectangles wrap
         physix.addEntity(rect);
     }
 
