@@ -368,7 +368,7 @@ class Physix {
 
          // Accumulated time for fixed timestep updates
         this._accumulator = 0;
-        this._fixedDeltaTime = 1 / 60; // Target 60 physics updates per second
+        this._fixedDeltaTime = 1 / 60; // Target 60 physics updates per second meaning 60fps
 
         console.log("Physix Engine Initialized");
     }
